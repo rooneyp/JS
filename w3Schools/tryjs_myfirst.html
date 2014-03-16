@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First JavaScript</h1>
+<p>Click the button to display the date.</p>
+<p id="demo"></p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<script>
+    var iAmGlobal;
+
+    function myFunction(foo, bar) { //Defines a function with function keyword
+        window.alert("sometext");
+        var txt = new String("Hello World");
+        var txtLen = txt.length;
+
+        myObjects();
+        document.getElementById("demo").innerHTML = Date();
+    }
+
+    function myFunctionReturns()
+    {
+        var x=5;
+        return x;
+    }
+
+    function myArrays() {
+        var cars1=new Array();
+        cars[0]="Saab";
+        cars[1]="Volvo";
+        cars[2]="BMW";
+
+        var cars2=new Array("Saab","Volvo","BMW");
+
+        var cars3=["Saab","Volvo","BMW"];
+    }
+
+    function myObjects() {
+        //?? how to create another new person?
+        var person2 = new Object();
+        person2.firstname = "John";
+        person2.lastname = "Doe";
+        person2.age = 50;
+        person2.eyecolor = "blue";
+
+        var person3={
+            firstname : "John",
+            lastname  : "Doe",
+            id        :  5566
+        };
+    }
+
+    function myVariables() {
+        // var causes scope to be local, thus discarded after function completes
+        var name = new String;
+        var x =    new Number;
+        var y =    new Boolean;
+
+        //Variables can be emptied by setting the value to null;
+        cars=null;
+        person=null;
+    }
+</script>
+
+</body>
+</html> 
