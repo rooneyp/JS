@@ -1,0 +1,46 @@
+{
+	"update_url": "http://clients2.google.com/service/update2/crx",
+
+	"name": "Better Pop Up Blocker",
+	"version": "2.1.6",
+	"minimum_chrome_version": "5.0",
+	"background_page": "background.html",
+	"options_page": "options.html", 
+  
+ 	"description": "Improves the Google Chrome pop up blocker by blocking pop up windows opened by javascript & other annoyances that it misses.",
+	"icons": 
+	{ 
+		"16": "Icon-16.png",
+		"19": "Icon-19.png",
+		"48": "Icon-48.png",
+		"128": "Icon-128.png" 
+	},
+	
+	"content_scripts": [
+		{
+		  "js": [ "common/port.js", "blockStart.js" ],
+		  "matches": [ "http://*/*", "https://*/*"],
+		  "run_at": "document_start",
+		  "all_frames": true
+		},
+		{
+		  "js": [ "common/port.js", "blockIdle.js" ],
+		  "matches": [ "http://*/*", "https://*/*"],
+		  "run_at": "document_end",
+		  "all_frames": true
+		}
+	],
+	
+	"page_action": 
+	{
+		"default_icon": "Icon-19.png",
+		"default_title": "Better Pop Up Blocker",
+		"default_popup": "browserActionPopUp.html"
+	},		
+	
+	"permissions": [
+		"tabs",
+		"http://*/*",
+		"https://*/*"
+	]
+}
