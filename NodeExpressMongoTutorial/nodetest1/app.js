@@ -5,9 +5,16 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+//access MongoDB using Monk driver. Mongoose is heavier alt. and is schema driven
 var mongo = require('mongodb');
 var monk = require('monk');
 var db = monk('localhost:27017/nodetest1');
+
+//LOGGING
+// console.log("simple log");
+// var util = require("util");
+// util.log("logging DB: " + util.inspect(db)); // log with timestamp
+
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -24,6 +31,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+// Make our db accessible to our router, by adding new? db connection to each http req
+// must happen before 'routes' is configured
+app.use(function(req,res,next){
+    req.db = db;
+    next();
+});
 
 //bind url base  to routing js file (each js file wires jade template to url pattern)
 app.use('/', routes);
