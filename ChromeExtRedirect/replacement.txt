@@ -1,0 +1,25 @@
+{
+	"feedBaseURLs":{
+	"baseFeed": "http://feeds.rasset.ie/rteavgen/player/",
+		"basePlaylist": "http://feeds.rasset.ie/rteavgen/player/playlist/",
+		"baseGenreList":"http://feeds.rasset.ie/rteavgen/player/genrelist/",
+		"baseGenre":"http://feeds.rasset.ie/rteavgen/player/genre/",
+		"baseChart":"http://feeds.rasset.ie/rteavgen/player/chart/",
+		"baseProgramme":"http://feeds.rasset.ie/rteavgen/player/programme/",
+		"baseLatest":"http://feeds.rasset.ie/rteavgen/player/latest/",
+		"baseLatestFront":"http://feeds.rasset.ie/rteavgen/player/latestfront/",
+		"baseDateList":"http://feeds.rasset.ie/rteavgen/player/datelist/",
+		"baseDate":"http://feeds.rasset.ie/rteavgen/player/date/",
+		"baseAZList":"http://feeds.rasset.ie/rteavgen/player/az/",
+		"baseLiveListings": "http://feeds.rasset.ie/livelistings/listing/",
+		"baseLiveNowNext": "http://feeds.rasset.ie/livelistings/nownext/",
+		"baseLivePlaylist": "http://feeds.rasset.ie/livelistings/playlist/",
+		"baseHelp": "http://www.rte.ie/tvplayer/ie/help/faq/",
+		"baseIdSearch":"http://feeds.rasset.rte.ie/rteavgen/customsearch/",
+		"baseTitleSearch":"http://feeds.rasset.ie/rteavgen/player/programmesummary/",
+		"baseCL":"http://feeds.rasset.ie/rteavgen/player/cl/",
+		"baseParental":"http://www.rte.ie/tvplayer/help/parental/"
+},
+	"requiredDomains":"google.com",
+	"requiredDomainsMessage":"intercepted"
+}

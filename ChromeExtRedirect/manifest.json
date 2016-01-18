@@ -1,0 +1,13 @@
+{
+  "name": "MyRedirect",
+  "version": "1.0",
+  "description": "Redirects...",
+  "permissions": ["webRequest", "webRequestBlocking", "http://www.rte.ie/*"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "web_accessible_resources": [
+    "replacement.txt"
+  ],
+  "manifest_version": 2
+}
